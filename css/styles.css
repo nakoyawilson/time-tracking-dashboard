@@ -218,6 +218,7 @@ input[type="radio"]:checked + label {
   .container {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(auto, 7);
+    width: 100%;
   }
 
   .user {
@@ -257,6 +258,11 @@ input[type="radio"]:checked + label {
 
   .hours {
     font-size: 2rem;
+    margin: 0.5rem 0;
+  }
+
+  .text-content {
+    padding: 1.5rem 2rem 0.5rem;
   }
 }
 
@@ -269,5 +275,11 @@ input[type="radio"]:checked + label {
 
   .time {
     flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .container {
+    width: 90%;
   }
 }
