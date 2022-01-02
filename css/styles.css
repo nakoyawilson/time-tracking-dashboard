@@ -9,6 +9,7 @@
   --self-care: hsl(43, 84%, 65%);
   --very-dark-blue: hsl(226, 43%, 10%);
   --dark-blue: hsl(235, 46%, 20%);
+  --card-hover: hsl(236, 46%, 31%);
   --desaturated-blue: hsl(235, 45%, 61%);
   --blue: hsl(246, 80%, 60%);
   --pale-blue: hsl(236, 100%, 87%);
@@ -46,13 +47,13 @@ main {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, auto);
-  gap: 1.5rem;
-  width: min(90%, 62rem);
+  gap: 1.75rem;
+  width: min(90%, 68.5rem);
   margin-inline: auto;
 }
 
 .card {
-  border-radius: 10px;
+  border-radius: 15px;
   overflow: hidden;
 }
 
@@ -64,11 +65,11 @@ main {
 .user {
   border-radius: inherit;
   background-color: var(--blue);
-  padding: 1.5rem 1.5rem 4rem;
+  padding: 2rem 2rem 5.5rem;
 }
 
 .profile-picture {
-  width: 4rem;
+  width: 5rem;
   height: auto;
   border: 2px solid var(--white);
   border-radius: 50%;
@@ -76,7 +77,7 @@ main {
 
 .title {
   font-weight: 300;
-  font-size: 2.25rem;
+  font-size: 2.5rem;
 }
 
 .report {
@@ -89,14 +90,13 @@ main {
 }
 
 .options {
-  padding: 1rem 0;
+  padding: 1.5rem 0;
 }
 
 .time-option {
   font-size: var(--font-size-main);
   color: var(--desaturated-blue);
-  width: 100%;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 2rem;
   text-align: left;
 }
 
@@ -137,10 +137,6 @@ input[type="radio"]:checked + label {
   font-weight: 400;
 }
 
-.ellipsis {
-  cursor: pointer;
-}
-
 .work {
   background-color: var(--work);
 }
@@ -167,13 +163,21 @@ input[type="radio"]:checked + label {
 
 .text-content {
   padding: 2rem;
-  border-radius: 10px;
+  border-radius: 15px;
   background-color: var(--dark-blue);
 }
 
 .text-content:hover {
-  background-color: var(--desaturated-blue);
+  background-color: var(--card-hover);
   cursor: pointer;
+}
+
+.ellipsis {
+  fill: #bbc0ff;
+}
+
+.ellipsis:hover {
+  fill: var(--white);
 }
 
 .hours {
@@ -202,10 +206,68 @@ input[type="radio"]:checked + label {
 }
 
 /* Media Queries */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
   .container {
-    grid-template-columns: auto;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(auto, 7);
     margin: 5rem auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto, 7);
+  }
+
+  .user {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+  }
+
+  .options {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 1.5rem;
+  }
+
+  .time-option {
+    padding: 0.5rem 0;
+    font-size: 1rem;
+  }
+
+  .options {
+    padding: 0;
+  }
+
+  .title {
+    font-size: 1.25rem;
+    padding-left: 0.75rem;
+  }
+
+  .report {
+    margin: 0;
+  }
+  .time {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .hours {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .options {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .time {
+    flex-direction: column;
   }
 }
