@@ -19,113 +19,170 @@
   <body>
     <main>
       <div class="container">
-        <div class="user-options">
-          <div class="">
+        <div class="card user-options">
+          <div class="user">
             <img
               src="images/image-jeremy.png"
               alt="Jeremy Robson"
               class="profile-picture"
             />
             <h1 class="title">
-              Report for <span class="name">Jeremy Robson</span>
+              <span class="report">Report for</span> Jeremy Robson
             </h1>
           </div>
-          <div class="buttons">
-            <button class="" id="daily-button">Daily</button>
-            <button class="" id="weekly-button">Weekly</button>
-            <button class="" id="monthly-button">Monthly</button>
+          <div class="options">
+            <div class="time-option">
+              <input type="radio" name="time-period" id="daily" /><label
+                for="daily"
+                class="label-text"
+                >Daily</label
+              >
+            </div>
+            <div class="time-option">
+              <input
+                type="radio"
+                name="time-period"
+                id="weekly"
+                checked
+              /><label for="weekly" class="label-text">Weekly</label>
+            </div>
+            <div class="time-option">
+              <input type="radio" name="time-period" id="monthly" /><label
+                for="monthly"
+                class="label-text"
+                >Monthly</label
+              >
+            </div>
           </div>
         </div>
-        <div class="">
-          <div class=""><img src="" alt="" class="section-icon" /></div>
-          <div class="">
-            <div class=""><h2 class="">Work</h2></div>
-            <div class=""><img src="images/icon-ellipsis.svg" alt="" /></div>
+        <div class="card work">
+          <div class="top">
+            <img src="images/icon-work.svg" alt="" class="section-icon" />
           </div>
-          <div class="">
-            <p class="hours">
-              <span class="current" id="work-current"></span>hrs
-            </p>
-            <p class>
-              Last Week - <span class="previous" id="work-previous"></span>hrs
-            </p>
-          </div>
-        </div>
-        <div class="">
-          <div class=""><img src="" alt="" class="section-icon" /></div>
-          <div class="">
-            <div class=""><h2 class="">Play</h2></div>
-            <div class=""><img src="images/icon-ellipsis.svg" alt="" /></div>
-          </div>
-          <div class="">
-            <p class="hours">
-              <span class="current" id="play-current"></span>hrs
-            </p>
-            <p class>
-              Last Week - <span class="previous" id="play-previous"></span>hrs
-            </p>
+          <div class="text-content">
+            <div class="header">
+              <div class=""><h2 class="card-title">Work</h2></div>
+              <div class="">
+                <img src="images/icon-ellipsis.svg" alt="" class="ellipsis" />
+              </div>
+            </div>
+            <div class="">
+              <p class="hours">
+                <span class="current" id="work-current"></span>hrs
+              </p>
+              <p class="previous">
+                Last Week - <span id="work-previous"></span>hrs
+              </p>
+            </div>
           </div>
         </div>
-        <div class="">
-          <div class=""><img src="" alt="" class="section-icon" /></div>
-          <div class="">
-            <div class=""><h2 class="">Study</h2></div>
-            <div class=""><img src="images/icon-ellipsis.svg" alt="" /></div>
+        <div class="card play">
+          <div class="top">
+            <img src="images/icon-play.svg" alt="" class="section-icon" />
           </div>
-          <div class="">
-            <p class="hours">
-              <span class="current" id="study-current"></span>hrs
-            </p>
-            <p class>
-              Last Week - <span class="previous" id="study-previous"></span>hrs
-            </p>
-          </div>
-        </div>
-        <div class="">
-          <div class=""><img src="" alt="" class="section-icon" /></div>
-          <div class="">
-            <div class=""><h2 class="">Exercise</h2></div>
-            <div class=""><img src="images/icon-ellipsis.svg" alt="" /></div>
-          </div>
-          <div class="">
-            <p class="hours">
-              <span class="current" id="exercise-current"></span>hrs
-            </p>
-            <p class>
-              Last Week -
-              <span class="previous" id="exercise-previous"></span>hrs
-            </p>
+          <div class="text-content">
+            <div class="header">
+              <div class=""><h2 class="card-title">Play</h2></div>
+              <div class="">
+                <img src="images/icon-ellipsis.svg" alt="" class="ellipsis" />
+              </div>
+            </div>
+            <div class="">
+              <p class="hours">
+                <span class="current" id="play-current"></span>hrs
+              </p>
+              <p class="previous">
+                Last Week - <span id="play-previous"></span>hrs
+              </p>
+            </div>
           </div>
         </div>
-        <div class="">
-          <div class=""><img src="" alt="" class="section-icon" /></div>
-          <div class="">
-            <div class=""><h2 class="">Social</h2></div>
-            <div class=""><img src="images/icon-ellipsis.svg" alt="" /></div>
+        <div class="card study">
+          <div class="top">
+            <img src="images/icon-study.svg" alt="" class="section-icon" />
           </div>
-          <div class="">
-            <p class="hours">
-              <span class="current" id="social-current"></span>hrs
-            </p>
-            <p class>
-              Last Week - <span class="previous" id="social-previous"></span>hrs
-            </p>
+          <div class="text-content">
+            <div class="header">
+              <div class=""><h2 class="card-title">Study</h2></div>
+              <div class="">
+                <img src="images/icon-ellipsis.svg" alt="" class="ellipsis" />
+              </div>
+            </div>
+            <div class="">
+              <p class="hours">
+                <span class="current" id="study-current"></span>hrs
+              </p>
+              <p class="previous">
+                Last Week -
+                <span id="study-previous"></span>hrs
+              </p>
+            </div>
           </div>
         </div>
-        <div class="">
-          <div class=""><img src="" alt="" class="section-icon" /></div>
-          <div class="">
-            <div class=""><h2 class="">Self Care</h2></div>
-            <div class=""><img src="images/icon-ellipsis.svg" alt="" /></div>
+        <div class="card exercise">
+          <div class="top">
+            <img src="images/icon-exercise.svg" alt="" class="section-icon" />
           </div>
-          <div class="">
-            <p class="hours">
-              <span class="current" id="selfcare-current"></span>hrs
-            </p>
-            <p class>
-              Last Week -
-              <span class="previous" id="selfcare-previous"></span>hrs
-            </p>
+          <div class="text-content">
+            <div class="header">
+              <div class=""><h2 class="card-title">Exercise</h2></div>
+              <div class="">
+                <img src="images/icon-ellipsis.svg" alt="" class="ellipsis" />
+              </div>
+            </div>
+            <div class="">
+              <p class="hours">
+                <span class="current" id="exercise-current"></span>hrs
+              </p>
+              <p class="previous">
+                Last Week -
+                <span id="exercise-previous"></span>hrs
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card social">
+          <div class="top">
+            <img src="images/icon-social.svg" alt="" class="section-icon" />
+          </div>
+          <div class="text-content">
+            <div class="header">
+              <div class=""><h2 class="card-title">Social</h2></div>
+              <div class="">
+                <img src="images/icon-ellipsis.svg" alt="" class="ellipsis" />
+              </div>
+            </div>
+            <div class="">
+              <p class="hours">
+                <span class="current" id="social-current"></span>hrs
+              </p>
+              <p class="previous">
+                Last Week -
+                <span id="social-previous"></span>hrs
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card self-care">
+          <div class="top">
+            <img src="images/icon-self-care.svg" alt="" class="section-icon" />
+          </div>
+          <div class="text-content">
+            <div class="header">
+              <div class=""><h2 class="card-title">Self Care</h2></div>
+              <div class="">
+                <img src="images/icon-ellipsis.svg" alt="" class="ellipsis" />
+              </div>
+            </div>
+            <div class="">
+              <p class="hours">
+                <span class="current" id="selfcare-current"></span>hrs
+              </p>
+              <p class="previous">
+                Last Week -
+                <span id="selfcare-previous"></span>hrs
+              </p>
+            </div>
           </div>
         </div>
       </div>
