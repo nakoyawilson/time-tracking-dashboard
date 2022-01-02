@@ -13,18 +13,54 @@ const selfcareCurrent = document.querySelector("#selfcare-current");
 const selfcarePrevious = document.querySelector("#selfcare-previous");
 
 const displayData = (time, data) => {
-  workCurrent.innerHTML = data[0].timeframes[time].current;
-  workPrevious.innerHTML = data[0].timeframes[time].previous;
-  playCurrent.innerHTML = data[1].timeframes[time].current;
-  playPrevious.innerHTML = data[1].timeframes[time].previous;
-  studyCurrent.innerHTML = data[2].timeframes[time].current;
-  studyPrevious.innerHTML = data[2].timeframes[time].previous;
-  exerciseCurrent.innerHTML = data[3].timeframes[time].current;
-  exercisePrevious.innerHTML = data[3].timeframes[time].previous;
-  socialCurrent.innerHTML = data[4].timeframes[time].current;
-  socialPrevious.innerHTML = data[4].timeframes[time].previous;
-  selfcareCurrent.innerHTML = data[5].timeframes[time].current;
-  selfcarePrevious.innerHTML = data[5].timeframes[time].previous;
+  workCurrent.innerHTML =
+    data[0].timeframes[time].current === 1
+      ? `${data[0].timeframes[time].current}hr`
+      : `${data[0].timeframes[time].current}hrs`;
+  workPrevious.innerHTML =
+    data[0].timeframes[time].previous === 1
+      ? `${data[0].timeframes[time].previous}hr`
+      : `${data[0].timeframes[time].previous}hrs`;
+  playCurrent.innerHTML =
+    data[1].timeframes[time].current === 1
+      ? `${data[1].timeframes[time].current}hr`
+      : `${data[1].timeframes[time].current}hrs`;
+  playPrevious.innerHTML =
+    data[1].timeframes[time].previous === 1
+      ? `${data[1].timeframes[time].previous}hr`
+      : `${data[1].timeframes[time].previous}hrs`;
+  studyCurrent.innerHTML =
+    data[2].timeframes[time].current === 1
+      ? `${data[2].timeframes[time].current}hr`
+      : `${data[2].timeframes[time].current}hrs`;
+  studyPrevious.innerHTML =
+    data[2].timeframes[time].previous === 1
+      ? `${data[2].timeframes[time].previous}hr`
+      : `${data[2].timeframes[time].previous}hrs`;
+  exerciseCurrent.innerHTML =
+    data[3].timeframes[time].current === 1
+      ? `${data[3].timeframes[time].current}hr`
+      : `${data[3].timeframes[time].current}hrs`;
+  exercisePrevious.innerHTML =
+    data[3].timeframes[time].previous === 1
+      ? `${data[3].timeframes[time].previous}hr`
+      : `${data[3].timeframes[time].previous}hrs`;
+  socialCurrent.innerHTML =
+    data[4].timeframes[time].current === 1
+      ? `${data[4].timeframes[time].current}hr`
+      : `${data[4].timeframes[time].current}hrs`;
+  socialPrevious.innerHTML =
+    data[4].timeframes[time].previous === 1
+      ? `${data[4].timeframes[time].previous}hr`
+      : `${data[4].timeframes[time].previous}hrs`;
+  selfcareCurrent.innerHTML =
+    data[5].timeframes[time].current === 1
+      ? `${data[5].timeframes[time].current}hr`
+      : `${data[5].timeframes[time].current}hrs`;
+  selfcarePrevious.innerHTML =
+    data[5].timeframes[time].previous === 1
+      ? `${data[5].timeframes[time].previous}hr`
+      : `${data[5].timeframes[time].previous}hrs`;
 };
 
 const fetchData = async () => {
