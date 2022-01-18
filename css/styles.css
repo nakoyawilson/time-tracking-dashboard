@@ -48,7 +48,7 @@ main {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, auto);
   gap: 1.75rem;
-  width: min(90%, 68.5rem);
+  width: min(90%, 69.5rem);
   margin-inline: auto;
 }
 
@@ -120,7 +120,7 @@ input[type="radio"]:checked + label {
 }
 
 .top {
-  height: 2.5rem;
+  height: 2.75rem;
   overflow: hidden;
   position: relative;
 }
@@ -128,7 +128,24 @@ input[type="radio"]:checked + label {
 .section-icon {
   position: absolute;
   top: -0.75rem;
-  right: 2rem;
+  right: 1rem;
+}
+
+.play .top .section-icon {
+  top: -0.25rem;
+  right: 1.25rem;
+}
+
+.study .top .section-icon {
+  top: -0.5rem;
+}
+
+.exercise .top .section-icon {
+  top: 0;
+}
+
+.social .top .section-icon {
+  top: 0;
 }
 
 .card-title {
@@ -161,7 +178,7 @@ input[type="radio"]:checked + label {
 }
 
 .text-content {
-  padding: 1.75rem 1.75rem 2.25rem;
+  padding: 1.75rem 1.75rem 2.1rem;
   border-radius: 15px;
   background-color: var(--dark-blue);
 }
@@ -184,9 +201,9 @@ input[type="radio"]:checked + label {
 }
 
 .hours {
-  font-size: 3.75rem;
+  font-size: 3.5rem;
   font-weight: 300;
-  margin: 1.25rem 0 0.5rem;
+  margin: 1.5rem 0 0.5rem;
 }
 
 .previous {
