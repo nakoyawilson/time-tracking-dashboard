@@ -161,7 +161,7 @@ input[type="radio"]:checked + label {
 }
 
 .text-content {
-  padding: 2rem;
+  padding: 1.75rem 1.75rem 2.25rem;
   border-radius: 15px;
   background-color: var(--dark-blue);
 }
@@ -184,9 +184,9 @@ input[type="radio"]:checked + label {
 }
 
 .hours {
-  font-size: 3rem;
+  font-size: 3.75rem;
   font-weight: 300;
-  margin: 2rem 0 1rem;
+  margin: 1.25rem 0 0.5rem;
 }
 
 .previous {
